@@ -8,25 +8,22 @@ empty array.
 function chooseyEndings(arr, str){
 
     let newArr = [];
-    let word = "";
+    let endOfWord = "";
 
-    if(typeof array !== "array"){
-        return arr;
-    }
+    for(let i = 0; i < arr.length; i++){
 
-    else{
-        for(let i = 0; i < arr.length; i++){
+        endOfWord = arr[i].substring(arr[i].length-2);
 
-            word = arr[i];
 
-            if(word.includes(str)){
-
-                newArr.push(word);
-            }
+        if(endOfWord.includes(str)){
+            newArr.push(arr[i]);
         }
-        return newArr;
+        
     }
+
+    return newArr;
 }
+    
 
 
 // console.log(chooseyEndings(['family', 'hound', 'catalyst','fly', 'timidly', 'bond'], 'ly'));
