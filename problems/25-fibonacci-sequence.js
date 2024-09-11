@@ -6,7 +6,25 @@ generate subsequent numbers of the sequence, we take the sum of the previous two
 numbers of the sequence.
 */
 
-// Your code here 
+function fibonacciSequence(length){
+
+    let arr = [];
+
+    if(length < 1){
+        return arr;
+    }
+    
+    arr.push(1);
+    arr.push(1);
+
+    for(let i = 0; i < length-2; i++){
+
+        arr.push(arr[i] + arr[i+1]);
+    }
+
+    return arr;
+
+}
 
 
 // console.log(fibonacciSequence(4));  // [ 1, 1, 2, 3 ]

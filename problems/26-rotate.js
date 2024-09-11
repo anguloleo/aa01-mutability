@@ -5,7 +5,35 @@ right. When the num is negative, the elements of the array should be rotated to
 the left. The function should mutate the original array.
 */
 
-// Your code here 
+function rotate(arr, num){
+    let tempArr = [];
+    let newArr = [];
+    let startIndex;
+    let numToRemove;
+
+    if(num > 0){
+
+        for(let i = 0; i < num; i++){
+
+            //remove from end and put on front
+            arr.splice(0, 0, arr.pop())
+        }
+
+        return arr;
+    }
+
+    else{
+
+        for(let i = 0; i < num; i++){
+
+            //remove from start and put on end
+            arr.splice(arr.length-1, 0, arr.shift())
+        }
+
+        return arr;
+    }
+
+}
 
 
 // let arr = ['a', 'b', 'c', 'd', 'e'];

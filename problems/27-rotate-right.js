@@ -7,7 +7,26 @@ array and instead return a new array.
 HINT: you can use Array's slice() method to create a copy of an array
 */
 
-// Your code here 
+function rotateRight(arr, num){
+
+    // let newArrStart = [];
+    // let newArrEnd = [];
+    let finalArr = [];
+    
+    for(let i = 0; i < num; i++){
+
+        //copy numbers at begging
+        let newArrStart = arr.slice(0, arr.length-num)
+        //copy numbers at end
+        let newArrEnd = arr.slice(arr.length-num, arr.length)
+        //concat both arrays
+        finalArr = newArrEnd.concat(newArrStart);
+
+    }
+
+    return finalArr;
+    
+}
 
 
 // let arr = ['a', 'b', 'c', 'd', 'e'];
