@@ -5,7 +5,24 @@ and is length elements long. In the sequence, every element should be 3 times
 the previous element. Assume that the length is at least 1.
 */
 
-// Your code here 
+function tripleSequence(start, length){
+    
+    let arr = [];
+    arr.push(start);
+
+    for(let i = 0; i < length-1; i++){
+
+        arr.push(arr[i] * 3);
+    }
+    return arr;
+
+
+
+
+
+
+    return arr;
+}
 
 
 // console.log(tripleSequence(2, 4)); // [2, 6, 18, 54]
